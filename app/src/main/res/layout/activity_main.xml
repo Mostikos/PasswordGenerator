@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ricardomoreira.passtest.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/buttonGenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/buttonGenerate"
+        android:layout_centerHorizontal="true"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSave"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxNumbers"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="139dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGenerate"
+        android:layout_centerHorizontal="true"
+        android:text="@string/textViewPassword"
+        android:textSize="32sp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSave"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLetters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/section_label"
+        android:text="@string/checkLetters"
+        android:layout_toStartOf="@+id/buttonGenerate"
+
+    android:onClick="selectItem"
+        app:layout_constraintRight_toLeftOf="@+id/editTextLength"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="23dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxNumbers" />
+
+
+
+    <CheckBox
+        android:id="@+id/checkBoxNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkBoxLetters"
+        android:layout_below="@+id/checkBoxLetters"
+        android:text="@string/checkNumbers"
+        android:onClick="selectItem"
+        app:layout_constraintRight_toLeftOf="@+id/buttonGenerate"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/checkBoxLetters"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxSymbols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkSymbols"
+        android:layout_above="@+id/checkBoxNumbers"
+        android:layout_toEndOf="@+id/buttonGenerate"
+        android:onClick="selectItem"
+        android:layout_marginEnd="73dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="75dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/editTextLength"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonSave"
+        android:layout_below="@+id/textViewPassword"
+        android:layout_alignStart="@+id/buttonGenerate"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewPassword" />
+
+    <EditText
+        android:id="@+id/editTextLength"
+        android:layout_width="84dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/checkBoxNumbers"
+        android:layout_alignParentEnd="true"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLetters"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextLength"
+        android:layout_alignStart="@+id/checkBoxNumbers"
+        android:layout_alignTop="@+id/editTextLength"
+        android:layout_toStartOf="@+id/buttonGenerate"
+        app:layout_constraintRight_toLeftOf="@+id/checkBoxSymbols"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:text="Length :"
+        android:textSize="16sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGenerate"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxLetters"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="@+id/checkBoxLetters" />
+
+</android.support.constraint.ConstraintLayout>
